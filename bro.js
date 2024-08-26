@@ -1,2 +1,4 @@
-let a=5;
-console.log(a);
+var firstName = "bishu";
+var nameLenght = 0;
+nameLenght = firstName.lenght;
+console.log(nameLenght);
