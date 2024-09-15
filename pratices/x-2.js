@@ -1,7 +1,7 @@
 let count = 0;
 
 document.getElementById("counter-btn").addEventListener("click", function() {
-  count+=1111;
+  count+=1;
   document.getElementById("count").innerHTML = count;
 });
 //add a function for reset
