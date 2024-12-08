@@ -17,4 +17,3 @@ let IsLoggedIn = 1;
 
 let booleanIsLoggedIn = Boolean(IsLoggedIn);
 console.log(booleanIsLoggedIn); // true
-
