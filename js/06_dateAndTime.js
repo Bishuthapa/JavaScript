@@ -25,5 +25,8 @@ let nDate = new Date()
 //console.log(nDate.getMonth() + 1);
 
 
+nDate.toLocaleString('default',{
+    weekday:"long"
+})
 
 
