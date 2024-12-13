@@ -18,6 +18,7 @@ let timeStamp= Date.now();
 
 
 let nDate = new Date()
+console.log(typeof nDate);
 //console.log(nDate.toLocaleString());
 //console.log("date:" +  nDate.getDate());
 //console.log("day:" +  nDate.getDay());
