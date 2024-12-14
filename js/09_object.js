@@ -12,10 +12,25 @@ const user = {
 
 
 
-console.log(user.name)
-console.log(user["name"]);
-console.log(user["email"]);
+//console.log(user.name)
+//console.log(user["name"]);
+//console.log(user["email"]);
 
-Object.freeze(user);
+//Object.freeze(user);
 user.email = "bishuthapa570@gmail.com";
-console.log(user["email"]);
+//console.log(user["email"]);
+
+
+user.greeting =function(){
+    console.log("hello");
+    
+}
+
+user.greetingTwo = function()
+{
+    console.log(`Hello, ${this.name}`),
+    console.log(`Is youi email, ${this.email}`);
+}
+
+console.log(user.greeting());
+console.log(user.greetingTwo());
