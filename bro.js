@@ -1,5 +1,5 @@
 const display = document.getElementById('display');
-function  aaucha(input){
+function  aaucha(input){///really aaucha
     display.value += input;
 }
 
