@@ -15,6 +15,7 @@ console.log("result:", result);
  */
 
 
+/*
 function userLoginMessage(userName = "Bishesh") {
     if(!userName){
         console.log("Please enter a username");
@@ -22,4 +23,34 @@ function userLoginMessage(userName = "Bishesh") {
         }
     return `${userName} just login in.`
 }
-console.log(userLoginMessage());
+console.log(userLoginMessage());*/
+
+
+function calculateCartPrice(val1, val2,...num1) //
+{
+    return num1;
+}
+//console.log(calculateCartPrice(200, 400, 600, 800));
+
+/*
+const userName= {
+    firstName : "Bishu",
+    age : 19
+}
+
+function guff(anyobject){
+    console.log(`His name is ${anyobject.firstName} and his age is ${anyobject.age}.`);
+}
+
+guff(userName);*/
+
+const newArray = [200, 400, 600, 800];
+
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+
+//console.log(returnSecondValue(newArray));
+//console.log(returnSecondValue([200, 400, 600, 800]));
+
+
