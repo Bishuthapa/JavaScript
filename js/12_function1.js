@@ -54,3 +54,20 @@ function returnSecondValue(getArray){
 //console.log(returnSecondValue([200, 400, 600, 800]));
 
 
+//choose the AI from the list of books collection
+
+const bookCollectio = ["webTech", "SAD", "AI", "NCD", "OR"];
+
+function chooseAI(getArray){
+    for(i=0 ; i< 5; i++)
+    {
+        if(bookCollectio[i] === "AI")
+        {
+            console.log(`yes it contain ${getArray[2]} book.`)
+            return true;
+        }
+        
+    }
+}
+
+console.log(chooseAI(bookCollectio));
