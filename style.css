@@ -16,7 +16,7 @@
 
 button{
     height: 100px;
-    width :100px;
+    width:100px;
     padding: 10px;
     border-radius: 100px;
     border: none;
@@ -28,8 +28,8 @@ button{
     padding: 15px;
     font-size: 5rem;
     text-align: left;
-    border:none;
-    color:white;
+    border: none;
+    color:gray;
     background-color: hsl(0, 0%,20%);
 }
 
@@ -37,14 +37,14 @@ button{
 
     
     cursor: pointer;
-    background-color: rgb(48, 43, 43);
-    color:white;
+    background-color: RGB(48, 43, 43);
+    color: white;
 
 }
-.power:hover{
-    background-color: rgb(13, 68, 103);
+.power :hover{
+    background-color: RGB(13, 68, 103);
 }
-.power:active{
+.power: active{
     background-color: lightblue;
 }
 body{
