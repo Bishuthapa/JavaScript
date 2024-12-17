@@ -1,5 +1,5 @@
-/*function sumTwoNumbers(a, b) {
-    console.log(a + b);
+function sumTwoNumbers(a, b) {
+    //console.log(a + b);
 }
 
 sumTwoNumbers(2, 3);
@@ -11,19 +11,19 @@ function sumTwoNumbers(a, b) {
     return y;
 }
 const result = sumTwoNumbers(2, 3);
-console.log("result:", result);
- */
+//console.log("result:", result);
+ 
 
 
-/*
+
 function userLoginMessage(userName = "Bishesh") {
     if(!userName){
-        console.log("Please enter a username");
+        //console.log("Please enter a username");
         return;
         }
     return `${userName} just login in.`
 }
-console.log(userLoginMessage());*/
+//console.log(userLoginMessage());*/
 
 
 function calculateCartPrice(val1, val2,...num1) //
@@ -32,17 +32,16 @@ function calculateCartPrice(val1, val2,...num1) //
 }
 //console.log(calculateCartPrice(200, 400, 600, 800));
 
-/*
+
 const userName= {
     firstName : "Bishu",
     age : 19
 }
-
 function guff(anyobject){
-    console.log(`His name is ${anyobject.firstName} and his age is ${anyobject.age}.`);
+   // console.log(`His name is ${anyobject.firstName} and his age is ${anyobject.age}.`);
 }
 
-guff(userName);*/
+guff(userName);
 
 const newArray = [200, 400, 600, 800];
 
