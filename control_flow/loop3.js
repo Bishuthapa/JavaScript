@@ -80,6 +80,10 @@ const car = [
         year : 2022
     }
 ]
+/*ForEach will not return anything, it just applies the conditions
+ to every element. It will not change the original array.*/
+
+
 car.forEach((models) =>{
     //console.log(models.model)
 
@@ -92,8 +96,23 @@ newArray.filter((item) => {
     //console.log(item);
 });
 
-
+/*The map() function receives a function as a parameter and will apply 
+the code on each element and returns an entirely new array. It will not change the original array.
+A map() function returns a new array and thus it should only be used
+ if you are going to use the returned array else one should prefer forEach() function.*/
 const newArray1 = [200, 400, 600, 800];
 
 let u = newArray1.map((num) => (num + 100));
 console.log(u);
+
+/*Return Value
+
+map() will return a new array as per the conditions applied.
+forEach() will not return anything. forEach() returns undefined.
+filter()method will return an array of matching elements else will return an empty array if no matching happens.
+If you have a requirement to modify the current array and are expecting a modified one, then you should go with map().
+If you just want to iterate the array, then you can use forEach().
+If you are expecting filtered values from a given array then you should use the filter() method.
+As forEach() returns undefined, you can not attach other functions like filter() with it.
+You can easily apply filter() with map().
+Other JavaScript methods can be attached with the filter() method.*/
