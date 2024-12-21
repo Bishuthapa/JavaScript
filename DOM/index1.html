@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #121212e2;
+        color: white;
+    }
+    </style>
+<body>
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+
+<script>
+    function addLanguage(LangName){
+        const li = document.createElement('li');
+        li.innerHTML = `${LangName}`;
+        document.querySelector('.languages').appendChild(li);
+
+    }
+    addLanguage("Python");
+
+
+    function addOptimalLang(LangName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${LangName}`));
+        document.querySelector('.languages').appendChild(li);
+    }
+
+    addOptimalLang("Java");
+    
+    
+const SecondLannn = document.querySelector("li:nth-child(2)")
+
+const newli = document.createElement('li')
+newli.textContent = "Mojo"
+SecondLannn.replaceWith(newli)
+
+    
+</script>
+</html>
