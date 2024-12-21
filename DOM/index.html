@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        #container{
+            color : orange;
+            display: flex  ;
+            justify-content: center;
+            
+
+        }
+        body{
+            background-color: #FEF3E2;
+
+        }
+    </style>
 </head>
+
 <body>
-    <div   id="container">
-        <h1>DOM</h1>
-        <p>Document Object Model</p>
-    </div>
     
 </body>
+
+
+<script>
+    const div = document.createElement('div')
+    div.className = 'main '
+    div.id = Math.random()
+    div.setAttribute('title', 'Home page')
+    div.style.color = 'orange'
+    div.style.fontSize = '20px'
+    div.style.backgroundColor = "#FEF3E2"
+    const addText = document.createTextNode('This is good')
+    div.appendChild(addText)
+
+    document.body.appendChild(div);
+
+</script>
 </html>
