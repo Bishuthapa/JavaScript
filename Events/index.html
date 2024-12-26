@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
+    <script src="script.js"></script>
+    <div id = "container">
+        <div id = "main">
+            <button id = "button">Click me</button><br><br>
+            <button id = "button1">Click me</button><br><br>
+            <button id = "button2">Click me</button><br><br>
+            <button id = "button3">Click me</button><br><br>
+        </div>
+    </div>    
+    <script>
+        const button = document.querySelector("#button");
+        button.addEventListener("click", (e) => {
+            document.querySelector("#button").innerText = `the first button was clicked`;
+            e.stopPropagation();
+        })
+
+        const button1 = document.querySelector("#button1");
+        button1.addEventListener("click", (e) => {
+            document.querySelector("#button1").innerText = `the second button was clicked`;
+            e.stopPropagation();
+        })  
+
+        const button2 = document.querySelector("#button2");
+        button2.addEventListener("click", (e) => {
+            document.querySelector("#button2").innerText = `the third button was clicked`;
+            e.stopPropagation();
+        })  
+
+        const button3 = document.querySelector("#button3");
+        button3.addEventListener("click", (e) => {
+            document.querySelector("#button3").innerText = `the fourth button was clicked`;
+            e.stopPropagation();
+        })  
+
+        const container = document.querySelector("#container");
+        container.addEventListener("click", (e) =>{
+            document.querySelector("#container").innerText = `the container was clicked`;
+            //also do  
+            // if(e.target.tagName === "button"){
+            //     document.querySelector("#button").innerText = `the first button was clicked`;    
+            // }
+        })
+
+
+    </script>
 </body>
 </html>
