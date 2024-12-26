@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+
+        }
+
+        button{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            background-color: greenyellow;
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #container{
+            background-color : honeydew;
+            border : 2px solid #000;
+            border-radius: 6px;
+            width : 400px;
+            height : 300px;
+            padding: 50px;
+            display :flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+    <button id = "start">Start</button><br><br>
+    <button id = "stop">Stop</button>    
+    </div>
+
+    <script>
+        const start = document.querySelector("#start");
+        const stop = document.querySelector("#stop");
+        bishu = function(){
+            console.log(Date.now());
+        }
+        let toStart;
+        start.addEventListener('click', () =>{
+            if(!toStart){
+           toStart = setInterval(bishu , 1000);
+            }
+        })
+
+        stop.addEventListener('click', () =>{
+            clearInterval(toStart);
+            toStart = null;
+        })
+    </script>
+</body>
+</html>
