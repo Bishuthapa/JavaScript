@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Weather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header">
+      <h1>Weather App</h1>
+      <p>Enter the name of the city to know the weather</p>
+      <input type="text" id="search" placeholder="Enter the city name" />
+      <button id="submit">Submit</button>
+    </div>
+    <br /><br />
+    <div class="container">
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Kathmandu</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <small class="text-body-secondary fw-light"></small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>cloudBase is <span id="cloudBase"></span></li>
+                  <li>cloudCeiling is <span id="cloudCeiling"></span></li>
+                  <li>cloudCover is <span id="cloudCover"></span></li>
+                  <li>dewPoint is <span id="dewPoint"></span></li>
+                  <li>
+                    evapotranspiration is <span id="evapotranspiration"></span>
+                  </li>
+                  <li>
+                    freezingRainIntensity is
+                    <span id="freezingRainIntensity"></span>
+                  </li>
+                  <li>hailProbability is <span id="hailProbability"></span></li>
+                  <li>hailSize is <span id="hailSize"></span></li>
+                  <li>humidity is <span id="humidity"></span></li>
+                  <li>iceAccumulation is <span id="iceAccumulation"></span></li>
+                  <li>
+                    iceAccumulationLwe is <span id="iceAccumulationLwe"></span>
+                  </li>
+                  <li>
+                    precipitationProbability is
+                    <span id="precipitationProbability"></span>
+                  </li>
+                  <li>
+                    pressureSurfaceLevel is
+                    <span id="pressureSurfaceLevel"></span>
+                  </li>
+                  <li>
+                    rainAccumulation is <span id="rainAccumulation"></span>
+                  </li>
+                  <li>
+                    rainAccumulationLwe is
+                    <span id="rainAccumulationLwe"></span>
+                  </li>
+                  <li>rainIntensity is <span id="rainIntensity"></span></li>
+                  <li>
+                    sleetAccumulation is <span id="sleetAccumulation"></span>
+                  </li>
+                  <li>
+                    sleetAccumulationLwe is
+                    <span id="sleetAccumulationLwe"></span>
+                  </li>
+                  <li>sleetIntensity is <span id="sleetIntensity"></span></li>
+                  <li>
+                    snowAccumulation is <span id="snowAccumulation"></span>
+                  </li>
+                  <li>
+                    snowAccumulationLwe is
+                    <span id="snowAccumulationLwe"></span>
+                  </li>
+                  <li>snowIntensity is <span id="snowIntensity"></span></li>
+                  <li>temperature is <span id="temperature"></span></li>
+                  <li>
+                    temperatureApparent is
+                    <span id="temperatureApparent"></span>
+                  </li>
+                  <li>uvHealthConcern is <span id="uvHealthConcern"></span></li>
+                  <li>uvIndex is <span id="uvIndex"></span></li>
+                  <li>visibility is <span id="visibility"></span></li>
+                  <li>weatherCode is <span id="weatherCode"></span></li>
+                  <li>windDirection is <span id="windDirection"></span></li>
+                  <li>windGust is <span id="windGust"></span></li>
+                  <li>windSpeed is <span id="windSpeed"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Tokyo</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <small class="text-body-secondary fw-light"></small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>cloudBase is <span id="cloudBase"></span></li>
+                  <li>cloudCeiling is <span id="cloudCeiling"></span></li>
+                  <li>cloudCover is <span id="cloudCover"></span></li>
+                  <li>dewPoint is <span id="dewPoint"></span></li>
+                  <li>
+                    evapotranspiration is <span id="evapotranspiration"></span>
+                  </li>
+                  <li>
+                    freezingRainIntensity is
+                    <span id="freezingRainIntensity"></span>
+                  </li>
+                  <li>hailProbability is <span id="hailProbability"></span></li>
+                  <li>hailSize is <span id="hailSize"></span></li>
+                  <li>humidity is <span id="humidity"></span></li>
+                  <li>iceAccumulation is <span id="iceAccumulation"></span></li>
+                  <li>
+                    iceAccumulationLwe is <span id="iceAccumulationLwe"></span>
+                  </li>
+                  <li>
+                    precipitationProbability is
+                    <span id="precipitationProbability"></span>
+                  </li>
+                  <li>
+                    pressureSurfaceLevel is
+                    <span id="pressureSurfaceLevel"></span>
+                  </li>
+                  <li>
+                    rainAccumulation is <span id="rainAccumulation"></span>
+                  </li>
+                  <li>
+                    rainAccumulationLwe is
+                    <span id="rainAccumulationLwe"></span>
+                  </li>
+                  <li>rainIntensity is <span id="rainIntensity"></span></li>
+                  <li>
+                    sleetAccumulation is <span id="sleetAccumulation"></span>
+                  </li>
+                  <li>
+                    sleetAccumulationLwe is
+                    <span id="sleetAccumulationLwe"></span>
+                  </li>
+                  <li>sleetIntensity is <span id="sleetIntensity"></span></li>
+                  <li>
+                    snowAccumulation is <span id="snowAccumulation"></span>
+                  </li>
+                  <li>
+                    snowAccumulationLwe is
+                    <span id="snowAccumulationLwe"></span>
+                  </li>
+                  <li>snowIntensity is <span id="snowIntensity"></span></li>
+                  <li>temperature is <span id="temperature"></span></li>
+                  <li>
+                    temperatureApparent is
+                    <span id="temperatureApparent"></span>
+                  </li>
+                  <li>uvHealthConcern is <span id="uvHealthConcern"></span></li>
+                  <li>uvIndex is <span id="uvIndex"></span></li>
+                  <li>visibility is <span id="visibility"></span></li>
+                  <li>weatherCode is <span id="weatherCode"></span></li>
+                  <li>windDirection is <span id="windDirection"></span></li>
+                  <li>windGust is <span id="windGust"></span></li>
+                  <li>windSpeed is <span id="windSpeed"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">New York</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <small class="text-body-secondary fw-light"></small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>cloudBase is <span id="cloudBase"></span></li>
+                  <li>cloudCeiling is <span id="cloudCeiling"></span></li>
+                  <li>cloudCover is <span id="cloudCover"></span></li>
+                  <li>dewPoint is <span id="dewPoint"></span></li>
+                  <li>
+                    evapotranspiration is <span id="evapotranspiration"></span>
+                  </li>
+                  <li>
+                    freezingRainIntensity is
+                    <span id="freezingRainIntensity"></span>
+                  </li>
+                  <li>hailProbability is <span id="hailProbability"></span></li>
+                  <li>hailSize is <span id="hailSize"></span></li>
+                  <li>humidity is <span id="humidity"></span></li>
+                  <li>iceAccumulation is <span id="iceAccumulation"></span></li>
+                  <li>
+                    iceAccumulationLwe is <span id="iceAccumulationLwe"></span>
+                  </li>
+                  <li>
+                    precipitationProbability is
+                    <span id="precipitationProbability"></span>
+                  </li>
+                  <li>
+                    pressureSurfaceLevel is
+                    <span id="pressureSurfaceLevel"></span>
+                  </li>
+                  <li>
+                    rainAccumulation is <span id="rainAccumulation"></span>
+                  </li>
+                  <li>
+                    rainAccumulationLwe is
+                    <span id="rainAccumulationLwe"></span>
+                  </li>
+                  <li>rainIntensity is <span id="rainIntensity"></span></li>
+                  <li>
+                    sleetAccumulation is <span id="sleetAccumulation"></span>
+                  </li>
+                  <li>
+                    sleetAccumulationLwe is
+                    <span id="sleetAccumulationLwe"></span>
+                  </li>
+                  <li>sleetIntensity is <span id="sleetIntensity"></span></li>
+                  <li>
+                    snowAccumulation is <span id="snowAccumulation"></span>
+                  </li>
+                  <li>
+                    snowAccumulationLwe is
+                    <span id="snowAccumulationLwe"></span>
+                  </li>
+                  <li>snowIntensity is <span id="snowIntensity"></span></li>
+                  <li>temperature is <span id="temperature"></span></li>
+                  <li>
+                    temperatureApparent is
+                    <span id="temperatureApparent"></span>
+                  </li>
+                  <li>uvHealthConcern is <span id="uvHealthConcern"></span></li>
+                  <li>uvIndex is <span id="uvIndex"></span></li>
+                  <li>visibility is <span id="visibility"></span></li>
+                  <li>weatherCode is <span id="weatherCode"></span></li>
+                  <li>windDirection is <span id="windDirection"></span></li>
+                  <li>windGust is <span id="windGust"></span></li>
+                  <li>windSpeed is <span id="windSpeed"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Common places weather</h2>
+
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%"></th>
+                <th style="width: 22%">temperature</th>
+                <th style="width: 22%">Visibility</th>
+                <th style="width: 22%">humidity</th>
+                <th style="width: 22%">dew_point</th>
+                <th style="width: 22%">wind_speed</th>
+                <th style="width: 22%">wind_dir</th>
+                <th style="width: 22%">rainIntensity</th>
+                <th style="width: 22%">uvIndex</th>
+                <th style="width: 22%">weatherCode</th>
+                <th style="width: 22%">pressure</th>
+                <th style="width: 22%">evapotranspiration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Kathmandu</th>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">England</th>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="text-start">New York</th>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Sydney</th>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Japan</th>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
