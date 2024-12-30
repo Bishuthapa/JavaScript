@@ -1,44 +1,58 @@
 const apiKey = "cb4b8a7e6f7350e894a671eae0ef80ec";
 const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-const searchBox = document.querySelector('#search-bar');
-const searchBtn = document.querySelector('#search-button');
+const searchBox = document.querySelector("#search-bar");
+const searchBtn = document.querySelector("#search-button");
 
 async function fetchWeather(city) {
-    const url = `${baseUrl}?q=${city}&appid=${apiKey}&units=metric`;
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const result = await response.json();
-        updateWeatherInfo(result, city);
-    } catch (error) {
-        console.error('Fetch error:', error);
+  const url = `${baseUrl}?q=${city}&appid=${apiKey}&units=metric`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
+    const result = await response.json();
+    updateWeatherInfo(result, city);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
 }
 
 function updateWeatherInfo(data, city) {
-    document.querySelector('.temp').innerHTML = `${Math.round(data.main.temp)} &deg;C`;
-    document.querySelector('.humidity').textContent = `Humidity: ${data.main.humidity}%`;
-    document.querySelector('.pressure').textContent = `Pressure: ${data.main.pressure} hPa`;
-    document.querySelector('.wind-speed').textContent = `Wind Speed: ${data.wind.speed} m/s`;
-    document.querySelector('.weather').textContent = `Weather: ${data.weather[0].description}`;
-    document.querySelector('.city').innerHTML = city;
+  document.querySelector(".temp").innerHTML = `${Math.round(
+    data.main.temp
+  )} &deg;C`;
+  document.querySelector(
+    ".humidity"
+  ).textContent = `Humidity: ${data.main.humidity}%`;
+  document.querySelector(
+    ".pressure"
+  ).textContent = `Pressure: ${data.main.pressure} hPa`;
+  document.querySelector(
+    ".wind-speed"
+  ).textContent = `Wind Speed: ${data.wind.speed} m/s`;
+  document.querySelector(
+    ".weather"
+  ).textContent = `Weather: ${data.weather[0].description}`;
+  document.querySelector(".city").innerHTML = city;
 }
 
-searchBtn.addEventListener('click', () => {
-    const city = searchBox.value;
-    fetchWeather(city);
-});
+document.querySelector(".date").textContent = new Date().toDateString();
 
-fetchWeather('kathmandu').then(() => {
-    document.querySelector('.date').textContent = new Date().toDateString();
-    setTimeout(() => {
-        fetchWeather('Biratnagar');
-    }, 10000); // Changed the delay to 10 seconds
-});
+function handleSearchEvent(e) {
+  if (e.type === "click" || (e.type === "keydown" && e.key === "Enter")) {
+    const city = searchBox.value.trim();
+    if (city) {
+      fetchWeather(city);
+    } else {
+      alert("Please enter a city name.");
+    }
+  }
+}
 
+searchBtn.addEventListener("click", handleSearchEvent);
+searchBox.addEventListener("keydown", handleSearchEvent);
 
+fetchWeather("kathmandu");
 
 /*
 const url = 'https://sunrise-sunset-times-pro.p.rapidapi.com/api/Solar/solartimes?date=2024-11-29&latitude=19.2568&longitude=-129.3678498';

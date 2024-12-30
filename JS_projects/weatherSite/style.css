@@ -1,18 +1,115 @@
-body{
-    background-color: #000;
-}
-h1{
-    font-size: 50px;
-}
-.card{
-    border : 2px solid #000;
-    margin-left:80px ;
-    width: 80vw;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 90px;
-    padding-left:20px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #87ceeb, #f0f8ff);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
+.container {
+    text-align: center;
+    background-color: #ffffffcc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    width: 90%;
+    max-width: 500px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+#search-bar:focus {
+    transform: scale(1.05);
+    border-color: #005999;
+}
+
+#search-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007acc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #005999;
+    transform: scale(1.1);
+}
+
+.Weathers h1,
+.Weathers h2 {
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+}
+
+.Weathers h1:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.Weathers h2:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.Weathers h2:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.Weathers h2:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.Weathers h2:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.Weathers h2:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
