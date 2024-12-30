@@ -1,0 +1,18 @@
+body{
+    background-color: #000;
+}
+h1{
+    font-size: 50px;
+}
+.card{
+    border : 2px solid #000;
+    margin-left:80px ;
+    width: 80vw;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 90px;
+    padding-left:20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
+
