@@ -35,7 +35,7 @@ fetchWeather('kathmandu').then(() => {
     document.querySelector('.date').textContent = new Date().toDateString();
     setTimeout(() => {
         fetchWeather('Biratnagar');
-    }, 5000);
+    }, 10000); // Changed the delay to 10 seconds
 });
 
 
