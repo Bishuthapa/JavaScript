@@ -9,3 +9,148 @@ body{
     text-align: center;
     padding: 10px;
 }
+
+#cityNameee{
+    text-align: center;
+    padding: 10px;
+    color:pink;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header Styles */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Card Styles */
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.card-body {
+  padding: 1em;
+}
+
+/* Table Styles */
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Common Places Weather Styles */
+
+.common-places-weather {
+  background-color: #f7f7f7;
+  padding: 1em;
+}
+
+.common-places-weather h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.header {
+  background-image: linear-gradient(to bottom, #333, #555);
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  padding: 1em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}.common-places-weather table {
+  margin-bottom: 1em;
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+
+.common-places-weather th, .common-places-weather td {
+  border: none;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.common-places-weather th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.common-places-weather td {
+  background-color: #fff;
+}
+.common-places-weather table {
+  margin-bottom: 1em;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 0.5em;
+  }
+
+  .table-responsive {
+    overflow-x: visible;
+  }
+}

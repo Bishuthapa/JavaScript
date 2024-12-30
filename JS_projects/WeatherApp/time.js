@@ -14,8 +14,17 @@ const wantedData = {
 async function fetchTime() {
 try {
 	const response = await fetch(url, options);
-	const result = await response.text();
+	const result = await response.json();
 	console.log(result);
+
+document.querySelector('.SunriseTime').textContent = result.localTimeSunrise;
+document.querySelector('.SunsetTime').textContent = result.localTimeSunset;
+
+
+
+
+
+
 } catch (error) {
 	console.error(error);
 }
