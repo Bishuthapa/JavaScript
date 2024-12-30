@@ -12,8 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
-
-  <body>
+  <body></body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Weather</a>
@@ -49,12 +48,8 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -68,15 +63,13 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
 
-    <div class="header">
+    <div class="header text-center">
       <h1>Weather App</h1>
       <p>Enter the name of the city to know the weather</p>
       <input type="text" id="search" placeholder="Enter the city name" />
@@ -85,10 +78,10 @@
     <br /><br />
     <div class="container">
       <main>
-        <div id = "cityNameee"><h2>Kathmandu Weather</h2></div>        
+        <div id="cityNameee"><h2>Kathmandu Weather</h2></div>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">              
+            <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">
                   <small class="text-body-secondary fw-light"></small>
@@ -99,19 +92,11 @@
                   <li>cloudCeiling is <span id="cloudCeiling"></span></li>
                   <li>cloudCover is <span id="cloudCover"></span></li>
                   <li>dewPoint is <span id="dewPoint"></span></li>
-                  <li>
-                    evapotranspiration is <span id="evapotranspiration"></span>
-                  </li>
-                  <li>
-                    freezingRainIntensity is
-                    <span id="freezingRainIntensity"></span>
-                  </li>
+                  <li>evapotranspiration is <span id="evapotranspiration"></span></li>
+                  <li>freezingRainIntensity is <span id="freezingRainIntensity"></span></li>
                   <li>hailProbability is <span id="hailProbability"></span></li>
                   <li>hailSize is <span id="hailSize"></span></li>
                   <li>humidity is <span id="humidity"></span></li>
-                  
-                 
-                
                 </ul>
               </div>
             </div>
@@ -124,60 +109,31 @@
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>iceAccumulation is <span id="iceAccumulation"></span></li>
-                  <li>
-                    iceAccumulationLwe is <span id="iceAccumulationLwe"></span>
-                  </li>                  
-                  <li>
-                    precipitationProbability is
-                    <span id="precipitationProbability"></span>
-                  </li>
-                  <li>
-                    pressureSurfaceLevel is
-                    <span id="pressureSurfaceLevel"></span>
-                  </li>
-                  <li>
-                    rainAccumulation is <span id="rainAccumulation"></span>
-                  </li>
-                  <li>
-                    rainAccumulationLwe is
-                    <span id="rainAccumulationLwe"></span>
-                  </li>
+                  <li>iceAccumulationLwe is <span id="iceAccumulationLwe"></span></li>
+                  <li>precipitationProbability is <span id="precipitationProbability"></span></li>
+                  <li>pressureSurfaceLevel is <span id="pressureSurfaceLevel"></span></li>
+                  <li>rainAccumulation is <span id="rainAccumulation"></span></li>
+                  <li>rainAccumulationLwe is <span id="rainAccumulationLwe"></span></li>
                   <li>rainIntensity is <span id="rainIntensity"></span></li>
-                  <li>
-                    sleetAccumulation is <span id="sleetAccumulation"></span>
-                  </li>
-                  <li>
-                    sleetAccumulationLwe is
-                    <span id="sleetAccumulationLwe"></span>
-                  </li>
+                  <li>sleetAccumulation is <span id="sleetAccumulation"></span></li>
+                  <li>sleetAccumulationLwe is <span id="sleetAccumulationLwe"></span></li>
                   <li>sleetIntensity is <span id="sleetIntensity"></span></li>
-                  <li>
-                    snowAccumulation is <span id="snowAccumulation"></span>
-                  </li>
-                  
-                 
-                
+                  <li>snowAccumulation is <span id="snowAccumulation"></span></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-body">
+              <div class="card-body"></div>
                 <h1 class="card-title pricing-card-title">
                   <small class="text-body-secondary fw-light"></small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li>
-                    snowAccumulationLwe is
-                    <span id="snowAccumulationLwe"></span>
-                  </li>
+                  <li>snowAccumulationLwe is <span id="snowAccumulationLwe"></span></li>
                   <li>snowIntensity is <span id="snowIntensity"></span></li>
                   <li>temperature is <span id="temperature"></span></li>
-                  <li>
-                    temperatureApparent is
-                    <span id="temperatureApparent"></span>
-                  </li>                  
+                  <li>temperatureApparent is <span id="temperatureApparent"></span></li>
                   <li>uvHealthConcern is <span id="uvHealthConcern"></span></li>
                   <li>uvIndex is <span id="uvIndex"></span></li>
                   <li>visibility is <span id="visibility"></span></li>
@@ -189,102 +145,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <h2 class="display-6 text-center mb-4">Common places weather</h2>
-
-        <div class="table-responsive">
-          <table class="table text-center">
-            <thead>
-              <tr>
-                <th style="width: 34%"></th>
-                <th style="width: 22%">temperature</th>
-                <th style="width: 22%">Visibility</th>
-                <th style="width: 22%">humidity</th>
-                <th style="width: 22%">dew_point</th>
-                <th style="width: 22%">wind_speed</th>
-                <th style="width: 22%">wind_dir</th>
-                <th style="width: 22%">rainIntensity</th>
-                <th style="width: 22%">uvIndex</th>
-                <th style="width: 22%">weatherCode</th>
-                <th style="width: 22%">pressure</th>
-                <th style="width: 22%">evapotranspiration</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" class="text-start">Kathmandu</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-start">England</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-
-              <tr>
-                <th scope="row" class="text-start">New York</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-start">Sydney</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-start">Japan</th>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </main>
     </div>
