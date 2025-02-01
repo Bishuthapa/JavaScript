@@ -62,7 +62,7 @@ function chooseAI(getArray){
     {
         if(bookCollectio[i] === "AI")
         {
-            console.log(`yes it contain ${getArray[2]} book.`)
+            console.log(`yes it contain ${getArray[i]} book.`)
             return true;
         }
         
