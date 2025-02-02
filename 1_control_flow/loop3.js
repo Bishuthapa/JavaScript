@@ -32,8 +32,8 @@ const myArray = [
     }
 ]
 myArray.forEach((item) => {
-    //console.log(item.languageExtention)
-    //console.log(item.languageFullName)
+    //console.log(item.languageExtention , " ===>", item.languageFullName)
+    // console.log(item.languageFullName)
 
 })
 
@@ -103,7 +103,7 @@ A map() function returns a new array and thus it should only be used
 const newArray1 = [200, 400, 600, 800];
 
 let u = newArray1.map((num) => (num + 100));
-console.log(u);
+//console.log(u);
 
 /*Return Value
 
