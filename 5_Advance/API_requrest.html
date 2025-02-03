@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XMLHttpsRequest</title>
     <style>
+        p{
+            color: white;
+        }
         body{
+            color:white;
             background-color: #000;
         }
     </style>
 </head>
 <body>
+    <h1 id = "info">Loading .....</h1>
+    <img id = "img" alt="photo" height="400"> 
     <script>
+        const info = document.querySelector('#info');
         const requestUrl ='https://randomuser.me/api/';
         const request = new XMLHttpRequest();
         request.open('GET', requestUrl);
@@ -20,7 +27,21 @@
         request.onload = function(){
             const data = request.response;
             console.log(data);
+            info.innerText = `Name: ${data.results[0].name.first} ${data.results[0].name.last}
+            Gender: ${data.results[0].gender}
+            Age: ${data.results[0].dob.age}
+            Location: ${data.results[0].location.city}
+            Country: ${data.results[0].location.country}
+            Email: ${data.results[0].email}
+         
+            `;
+            const img = document.querySelector('#img');
+            img.src = data.results[0].picture.large;
+
         }
+       
+
+
         </script>
         
 </body>
